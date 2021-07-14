@@ -140,10 +140,20 @@ caption{
     font-size: 40px;
     font-weight: 700;
 }
+.table-container{
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+   
+
 table {
     border-collapse: collapse;
     width:100%;
     border:1px solid lightgray;
+    text-align: center;
       }
 
 td, th{
@@ -165,22 +175,37 @@ tr:nth-child(even) {
 }
 /*----Form-----*/
 .form-container{
-    background-color: var(--bg-color);
+   
     margin-top:80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.subscribe{
+    width: 100%;
+    background-color:#2D25A0 ;
+    color: white;
     text-align: center;
+    font-size: 50px;
 }
 
 input{
+  
    margin: 5px;
-    padding:25px;
-    width:500px;
+   padding:25px;
+   border-radius: 10px;
+    
 }
-button{
+.login-button{
     color: white;
     font-size: 20px;
     text-align: center;
     border-radius: 10px;
-    margin:5px;
+    margin-bottom: 25px;
+    background-image: linear-gradient(to right, #af144d,#e63f7c) ;
+    padding: 10px 25px;
+   
 }
 /*----logo------*/
 .logo{
@@ -201,4 +226,59 @@ button{
 }
 .copyright p{
     font-size: 18px;
+}
+
+/*---------------
+media query
+----------------*/
+@media only  screen and (max-width:688px){
+    .top-container{
+        width: 100%;
+        flex-direction: column;
+        height: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: repeat(1,1fr);
+        flex-direction: column;
+    }
+  footer{
+      width: 100%;
+  } 
+  .logo{
+      width:100%;
+      display: flex;
+     
+  }
+  .logo img{
+      width:80%
+  }
+
+}
+@media only  screen and (min-width:689px) and (max-width:992px){
+    .top-container{
+        width: 100%;
+        flex-direction: column;
+        height: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: repeat(2,1fr);
+        flex-direction: column;
+    }
+  footer{
+      width: 100%;
+  } 
+  .logo{
+      width:100%;
+      display: flex;
+     
+  }
+  .logo img{
+      width:80%
+  }
 }
